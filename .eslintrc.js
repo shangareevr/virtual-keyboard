@@ -12,5 +12,8 @@ module.exports = {
   },
   rules: {
     'import/extensions': 'off',
+    'linebreak-style': 0,
+    ' global-require': 0,
+    'стиль разрыва строки eslint': [0, 'ошибка', 'windows'],
   },
 };

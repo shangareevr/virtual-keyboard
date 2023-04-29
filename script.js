@@ -1,8 +1,6 @@
 import keyBtns from './btns.js';
 
 let lang = 'eng';
-const caps = false;
-const shift = false;
 
 const wrapper = document.createElement('div');
 wrapper.classList.add('wrapper');
@@ -28,6 +26,10 @@ class GenerateKey {
   createElement() {
     const key = document.createElement('div');
     key.className = `key ${this.name}`;
+    const str = this.name.substring(0, 3);
+    if (str === 'Key') {
+      key.classList.add('letter');
+    }
     key.innerHTML = `
             <div class='value rus hidden-key'>${this.rus}</div>
             <div class='value rusCaps hidden-key'>${this.rusCaps}</div>
@@ -77,21 +79,6 @@ function animatedForPressKey() {
 }
 animatedForPressKey();
 
-// function changeInputLang(){
-//   console.log(lang);
-//   if (lang == "rus") {
-//     lang = "eng";
-//       generateKeyboard();
-//   } else {
-//     lang = "rus"
-//       generateKeyboard();
-//   }
-// keyboard.addEventListener("click", (e)=>{
-//   inputText.innerText = inputText.innerText+ e.target.innerText;
-//   console.log(e.target.innerText)
-//   console.log(inputText.selectionStart);
-//   console.log(inputText.selectionEnd)
-// })
 function defineLang() {
   if (lang === 'eng') {
     lang = 'rus';
@@ -107,11 +94,10 @@ function defineLang() {
 function changeInputLang() {
   const keysToLang = new Set();
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Shift' || e.key === 'Alt') {
-      // console.log(e.key);
+    if (e.key === 'Control' || e.key === 'Alt') {
       keysToLang.add(e.key);
     }
-    if (keysToLang.has('Shift') && keysToLang.has('Alt')) {
+    if (keysToLang.has('Control') && keysToLang.has('Alt')) {
       keysToLang.clear();
       defineLang();
     }
@@ -120,14 +106,44 @@ function changeInputLang() {
     keysToLang.delete(e.key);
   });
 }
-
 changeInputLang();
-// document.addEventListener("keydown", (e)=>{
-//   console.log(e.code);
-//   console.log(e.key);
-//   if (e.code == "KeyZ") {
-//     console.log("я");
-//   keyboard.innerHTML = "";
-// // changeInputLang()
-//   }
-// })
+
+function shiftKey() {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Shift') {
+      lang = `${lang}Caps`;
+      keyboard.innerHTML = '';
+      generateKeyboard();
+    }
+  });
+  document.addEventListener('keyup', (e) => {
+    if (e.key === 'Shift') {
+      lang = lang.substring(0, 3);
+      keyboard.innerHTML = '';
+      generateKeyboard();
+    }
+  });
+}
+shiftKey();
+
+function capsKay() {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'CapsLock') {
+      keyboard.childNodes.forEach((keys) => {
+        if (keys.classList.contains('letter') || (keys.classList.contains('Backquote') && (lang === 'rus'))) {
+          keys.childNodes.forEach((node) => {
+            if (node.nodeName !== '#text') {
+              if (node.classList.contains(`${lang}Caps`)) {
+                node.classList.toggle('hidden-key');
+              }
+              if (node.classList.contains(`${lang}`)) {
+                node.classList.toggle('hidden-key');
+              }
+            }
+          });
+        }
+      });
+    }
+  });
+}
+capsKay();
