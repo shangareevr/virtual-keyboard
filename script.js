@@ -32,8 +32,29 @@ class GenerateKey {
     keyboard.append(key);
   }
 }
-
-keyBtns.forEach((btn) => {
-  const res = new GenerateKey(btn.name, btn.rus, btn.eng, btn.rusCaps, btn.engCaps);
-  res.createElement();
-});
+function generateKeyboard() {
+  keyBtns.forEach((btn) => {
+    const res = new GenerateKey(btn.name, btn.rus, btn.eng, btn.rusCaps, btn.engCaps);
+    res.createElement();
+  });
+}
+generateKeyboard();
+function animatedForPressKey() {
+  window.addEventListener('keydown', (e) => {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach((key) => {
+      if (key.classList.contains(e.code)) {
+        key.classList.add('active');
+      }
+    });
+  });
+  window.addEventListener('keyup', (e) => {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach((key) => {
+      if (key.classList.contains(e.code)) {
+        key.classList.remove('active');
+      }
+    });
+  });
+}
+animatedForPressKey();

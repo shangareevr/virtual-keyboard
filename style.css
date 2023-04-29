@@ -34,7 +34,7 @@
   font-size: 15px;
   letter-spacing: 2;
   user-select: none;
-  transition: .3s;
+  transition: 0.1s;
 }
 .Backspace,
 .CapsLock,
@@ -54,4 +54,10 @@
 }
 .hidden-key {
   display: none;
+}
+.key.active {
+  background-color:	#00BFFF;
+}
+.key:active {
+  background-color:	#00BFFF;
 }
