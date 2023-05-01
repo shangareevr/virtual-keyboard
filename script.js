@@ -1,7 +1,6 @@
 import keyBtns from './btns.js';
 
-let lang = 'eng';
-
+let lang = localStorage.getItem('lang');
 const wrapper = document.createElement('div');
 wrapper.classList.add('wrapper');
 document.body.prepend(wrapper);
@@ -13,6 +12,14 @@ wrapper.prepend(inputText);
 const keyboard = document.createElement('div');
 keyboard.classList.add('keyboard__wrapper');
 wrapper.append(keyboard);
+
+window.addEventListener('load', () => {
+  if (localStorage.getItem('lang')) {
+    lang = localStorage.getItem('lang');
+  } else {
+    lang = 'rus';
+  }
+});
 
 class GenerateKey {
   constructor(name, rus, eng, rusCaps, engCaps) {
@@ -88,6 +95,7 @@ function defineLang() {
     keyboard.innerHTML = '';
     generateKeyboard();
   }
+  localStorage.setItem('lang', lang);
 }
 
 function changeInputLang() {
@@ -209,4 +217,5 @@ function switchLangVirtial() {
     }
   });
 }
+
 switchLangVirtial();
