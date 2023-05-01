@@ -1,6 +1,6 @@
 import keyBtns from './btns.js';
 
-let lang = localStorage.getItem('lang');
+let lang = 'rus';
 const wrapper = document.createElement('div');
 wrapper.classList.add('wrapper');
 document.body.prepend(wrapper);
@@ -22,13 +22,18 @@ langInfo.innerHTML = 'Клавиатура выполнена под Windows. <b
 wrapper.append(langInfo);
 
 inputText.focus();
-window.addEventListener('load', () => {
+
+function setLocalStorage() {
+  localStorage.setItem("lang", lang);
+}
+window.addEventListener('beforeunload', setLocalStorage)
+
+function getLocalStorage() {
   if (localStorage.getItem('lang')) {
     lang = localStorage.getItem('lang');
-  } else {
-    lang = 'rus';
   }
-});
+}
+window.addEventListener('load', getLocalStorage);
 
 class GenerateKey {
   constructor(name, rus, eng, rusCaps, engCaps) {
@@ -128,6 +133,7 @@ function changeInputLang() {
   document.addEventListener('keyup', (e) => {
     keysToLang.delete(e.code);
   });
+  setLocalStorage()
 }
 changeInputLang();
 
