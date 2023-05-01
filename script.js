@@ -1,6 +1,8 @@
 import keyBtns from './btns.js';
 
-let lang = 'rus';
+let lang = localStorage.getItem('lang');
+let caps = false;
+let shift = false;
 const wrapper = document.createElement('div');
 wrapper.classList.add('wrapper');
 document.body.prepend(wrapper);
@@ -24,7 +26,7 @@ wrapper.append(langInfo);
 inputText.focus();
 
 function setLocalStorage() {
-  localStorage.setItem("lang", lang);
+  localStorage.setItem('lang', lang);
 }
 window.addEventListener('beforeunload', setLocalStorage)
 
@@ -33,8 +35,7 @@ function getLocalStorage() {
     lang = localStorage.getItem('lang');
   }
 }
-window.addEventListener('load', getLocalStorage);
-
+window.addEventListener('load', getLocalStorage)
 class GenerateKey {
   constructor(name, rus, eng, rusCaps, engCaps) {
     this.name = name;
@@ -116,7 +117,8 @@ function defineLang() {
     keyboard.innerHTML = '';
     generateKeyboard();
   }
-  localStorage.setItem('lang', lang);
+  setLocalStorage;
+
 }
 
 function changeInputLang() {
@@ -133,7 +135,6 @@ function changeInputLang() {
   document.addEventListener('keyup', (e) => {
     keysToLang.delete(e.code);
   });
-  setLocalStorage()
 }
 changeInputLang();
 
