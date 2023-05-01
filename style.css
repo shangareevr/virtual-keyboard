@@ -65,8 +65,10 @@
   display: none;
 }
 .key.active {
+  transform: translateY(2px);
   background-color:	#00BFFF;
 }
 .key:active {
+  transform: translateY(2px);
   background-color:	#00BFFF;
 }
