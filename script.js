@@ -25,7 +25,6 @@ wrapper.append(langInfo);
 
 inputText.focus();
 
-
 function getLocalStorage() {
   if (localStorage.getItem('lang')) {
     lang = localStorage.getItem('lang');
@@ -33,7 +32,7 @@ function getLocalStorage() {
     lang = 'eng';
   }
 }
-window.addEventListener('load', getLocalStorage)
+window.addEventListener('load', getLocalStorage);
 class GenerateKey {
   constructor(name, rus, eng, rusCaps, engCaps) {
     this.name = name;
@@ -115,7 +114,7 @@ function defineLang() {
     keyboard.innerHTML = '';
     generateKeyboard();
   }
-  localStorage.setItem('lang', lang)
+  localStorage.setItem('lang', lang);
 }
 
 function changeInputLang() {
@@ -131,7 +130,7 @@ function changeInputLang() {
   });
   document.addEventListener('keyup', (e) => {
     keysToLang.delete(e.code);
-  })
+  });
 }
 changeInputLang();
 
@@ -367,9 +366,25 @@ function inputTextAreaVirtual() {
         inputText.selectionEnd = inputText.selectionStart;
       }
     }
+    if (clickBtn.contains('active')) {
+      if (clickBtn.contains('ShiftLeft') || clickBtn.contains('ShiftRight')) {
+        shift = true;
+      } else
+      if (clickBtn.contains('CapsLock')) {
+        caps = true;
+      }
+    }
     keyBtns.forEach((key) => {
       if (e.target.parentElement.classList.contains(key.name) && !key.functional) {
-        inputText.value += key[`${lang}`];
+        if (shift && !caps) {
+          inputText.value += key[`${lang}Caps`];
+        } else if (caps) {
+          if (e.target.parentElement.classList.contains('letter')) {
+            inputText.value += key[`${lang}Caps`];
+          } else inputText.value += key[`${lang}`];
+        } else {
+          inputText.value += key[`${lang}`];
+        }
       }
     });
   });

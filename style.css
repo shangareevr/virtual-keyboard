@@ -1,7 +1,7 @@
 
 .wrapper {
   margin: 0 auto;
-  width: 800px;
+  width: 750px;
   height: 800px;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
 .keyboard__wrapper {
   margin-top: 10px; 
   display: flex;
-  width: 800px;
+  width: 750px;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 5px;
