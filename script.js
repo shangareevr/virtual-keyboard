@@ -25,14 +25,12 @@ wrapper.append(langInfo);
 
 inputText.focus();
 
-function setLocalStorage() {
-  localStorage.setItem('lang', lang);
-}
-window.addEventListener('beforeunload', setLocalStorage)
 
 function getLocalStorage() {
   if (localStorage.getItem('lang')) {
     lang = localStorage.getItem('lang');
+  } else {
+    lang = 'eng';
   }
 }
 window.addEventListener('load', getLocalStorage)
@@ -117,8 +115,7 @@ function defineLang() {
     keyboard.innerHTML = '';
     generateKeyboard();
   }
-  setLocalStorage;
-
+  localStorage.setItem('lang', lang)
 }
 
 function changeInputLang() {
@@ -134,7 +131,7 @@ function changeInputLang() {
   });
   document.addEventListener('keyup', (e) => {
     keysToLang.delete(e.code);
-  });
+  })
 }
 changeInputLang();
 
