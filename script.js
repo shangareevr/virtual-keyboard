@@ -26,10 +26,10 @@ window.addEventListener('load', () => {
   if (localStorage.getItem('lang')) {
     lang = localStorage.getItem('lang');
   } else {
-    lang = 'rus';
+    lang = 'eng';
   }
 });
-
+console.log(lang)
 class GenerateKey {
   constructor(name, rus, eng, rusCaps, engCaps) {
     this.name = name;
