@@ -11,6 +11,9 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'max-len': ['error', {
+      code: 200,
+    }],
     'import/extensions': 'off',
     'linebreak-style': 0,
     ' global-require': 0,

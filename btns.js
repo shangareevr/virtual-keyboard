@@ -4,6 +4,7 @@ const keyBtns = [{
   rus: 'ё',
   engCaps: '~',
   rusCaps: 'Ё',
+  functional: false,
 },
 {
   name: 'Digit1',
@@ -11,6 +12,7 @@ const keyBtns = [{
   rus: '1',
   engCaps: '!',
   rusCaps: '!',
+  functional: false,
 },
 {
   name: 'Digit2',
@@ -18,6 +20,7 @@ const keyBtns = [{
   rus: '2',
   engCaps: '@',
   rusCaps: '"',
+  functional: false,
 },
 {
   name: 'Digit3',
@@ -25,6 +28,7 @@ const keyBtns = [{
   rus: '3',
   engCaps: '#',
   rusCaps: '№',
+  functional: false,
 },
 {
   name: 'Digit4',
@@ -32,6 +36,7 @@ const keyBtns = [{
   rus: '4',
   engCaps: '$',
   rusCaps: ';',
+  functional: false,
 },
 {
   name: 'Digit5',
@@ -39,6 +44,7 @@ const keyBtns = [{
   rus: '5',
   engCaps: '%',
   rusCaps: '%',
+  functional: false,
 },
 {
   name: 'Digit6',
@@ -46,6 +52,7 @@ const keyBtns = [{
   rus: '6',
   engCaps: '^',
   rusCaps: ':',
+  functional: false,
 },
 {
   name: 'Digit7',
@@ -53,6 +60,7 @@ const keyBtns = [{
   rus: '7',
   engCaps: '&',
   rusCaps: '?',
+  functional: false,
 },
 {
   name: 'Digit8',
@@ -60,6 +68,7 @@ const keyBtns = [{
   rus: '8',
   engCaps: '*',
   rusCaps: '*',
+  functional: false,
 },
 {
   name: 'Digit9',
@@ -67,6 +76,7 @@ const keyBtns = [{
   rus: '9',
   engCaps: '(',
   rusCaps: '(',
+  functional: false,
 },
 {
   name: 'Digit0',
@@ -74,6 +84,7 @@ const keyBtns = [{
   rus: '0',
   engCaps: ')',
   rusCaps: ')',
+  functional: false,
 },
 {
   name: 'Minus',
@@ -81,6 +92,7 @@ const keyBtns = [{
   rus: '-',
   engCaps: '_',
   rusCaps: '_',
+  functional: false,
 },
 {
   name: 'Equal',
@@ -88,6 +100,7 @@ const keyBtns = [{
   rus: '=',
   engCaps: '+',
   rusCaps: '+',
+  functional: false,
 },
 {
   name: 'Backspace',
@@ -95,6 +108,7 @@ const keyBtns = [{
   rus: 'Backspace',
   engCaps: 'Backspace',
   rusCaps: 'Backspace',
+  functional: true,
 },
 {
   name: 'Tab',
@@ -102,6 +116,7 @@ const keyBtns = [{
   rus: 'Tab',
   engCaps: 'Tab',
   rusCaps: 'Tab',
+  functional: true,
 },
 {
   name: 'KeyQ',
@@ -109,6 +124,7 @@ const keyBtns = [{
   rus: 'й',
   engCaps: 'Q',
   rusCaps: 'Й',
+  functional: false,
 },
 {
   name: 'KeyW',
@@ -116,6 +132,7 @@ const keyBtns = [{
   rus: 'ц',
   engCaps: 'W',
   rusCaps: 'Ц',
+  functional: false,
 },
 {
   name: 'KeyE',
@@ -123,6 +140,7 @@ const keyBtns = [{
   rus: 'у',
   engCaps: 'E',
   rusCaps: 'У',
+  functional: false,
 },
 {
   name: 'KeyR',
@@ -130,6 +148,7 @@ const keyBtns = [{
   rus: 'к',
   engCaps: 'R',
   rusCaps: 'К',
+  functional: false,
 },
 {
   name: 'KeyT',
@@ -137,6 +156,7 @@ const keyBtns = [{
   rus: 'е',
   engCaps: 'T',
   rusCaps: 'Е',
+  functional: false,
 },
 {
   name: 'KeyY',
@@ -144,6 +164,7 @@ const keyBtns = [{
   rus: 'н',
   engCaps: 'Y',
   rusCaps: 'Н',
+  functional: false,
 },
 {
   name: 'KeyU',
@@ -151,6 +172,7 @@ const keyBtns = [{
   rus: 'г',
   engCaps: 'U',
   rusCaps: 'Г',
+  functional: false,
 },
 {
   name: 'KeyI',
@@ -158,6 +180,7 @@ const keyBtns = [{
   rus: 'ш',
   engCaps: 'I',
   rusCaps: 'Ш',
+  functional: false,
 },
 {
   name: 'KeyO',
@@ -165,6 +188,7 @@ const keyBtns = [{
   rus: 'щ',
   engCaps: 'O',
   rusCaps: 'Щ',
+  functional: false,
 },
 {
   name: 'KeyP',
@@ -172,6 +196,7 @@ const keyBtns = [{
   rus: 'з',
   engCaps: 'P',
   rusCaps: 'З',
+  functional: false,
 },
 {
   name: 'BracketLeft',
@@ -179,6 +204,7 @@ const keyBtns = [{
   rus: 'х',
   engCaps: '{',
   rusCaps: 'Х',
+  functional: false,
 },
 {
   name: 'BracketRight',
@@ -186,6 +212,7 @@ const keyBtns = [{
   rus: 'ъ',
   engCaps: '}',
   rusCaps: 'Ъ',
+  functional: false,
 },
 {
   name: 'Backslash',
@@ -193,6 +220,7 @@ const keyBtns = [{
   rus: '\\',
   engCaps: '|',
   rusCaps: '/',
+  functional: false,
 },
 {
   name: 'Delete',
@@ -200,6 +228,7 @@ const keyBtns = [{
   rus: 'Del',
   engCaps: 'Del',
   rusCaps: 'Del',
+  functional: true,
 },
 {
   name: 'CapsLock',
@@ -207,6 +236,7 @@ const keyBtns = [{
   rus: 'CapsLock',
   engCaps: 'CapsLock',
   rusCaps: 'CapsLock',
+  functional: true,
 },
 {
   name: 'KeyA',
@@ -214,6 +244,7 @@ const keyBtns = [{
   rus: 'ф',
   engCaps: 'A',
   rusCaps: 'Ф',
+  functional: false,
 },
 {
   name: 'KeyS',
@@ -221,6 +252,7 @@ const keyBtns = [{
   rus: 'ы',
   engCaps: 'S',
   rusCaps: 'Ы',
+  functional: false,
 },
 {
   name: 'KeyD',
@@ -228,6 +260,7 @@ const keyBtns = [{
   rus: 'в',
   engCaps: 'D',
   rusCaps: 'В',
+  functional: false,
 },
 {
   name: 'KeyF',
@@ -235,6 +268,7 @@ const keyBtns = [{
   rus: 'а',
   engCaps: 'F',
   rusCaps: 'А',
+  functional: false,
 },
 {
   name: 'KeyG',
@@ -242,6 +276,7 @@ const keyBtns = [{
   rus: 'п',
   engCaps: 'G',
   rusCaps: 'П',
+  functional: false,
 },
 {
   name: 'KeyH',
@@ -249,6 +284,7 @@ const keyBtns = [{
   rus: 'р',
   engCaps: 'H',
   rusCaps: 'Р',
+  functional: false,
 },
 {
   name: 'KeyJ',
@@ -256,6 +292,7 @@ const keyBtns = [{
   rus: 'о',
   engCaps: 'J',
   rusCaps: 'О',
+  functional: false,
 },
 {
   name: 'KeyK',
@@ -263,6 +300,7 @@ const keyBtns = [{
   rus: 'л',
   engCaps: 'K',
   rusCaps: 'Л',
+  functional: false,
 },
 {
   name: 'KeyL',
@@ -270,6 +308,7 @@ const keyBtns = [{
   rus: 'д',
   engCaps: 'L',
   rusCaps: 'Д',
+  functional: false,
 },
 {
   name: 'Semicolon',
@@ -277,6 +316,7 @@ const keyBtns = [{
   rus: 'ж',
   engCaps: ':',
   rusCaps: 'Ж',
+  functional: false,
 },
 {
   name: 'Quote',
@@ -284,6 +324,7 @@ const keyBtns = [{
   rus: 'э',
   engCaps: '"',
   rusCaps: 'Э',
+  functional: false,
 },
 {
   name: 'Enter',
@@ -291,6 +332,7 @@ const keyBtns = [{
   rus: 'Enter',
   engCaps: 'Enter',
   rusCaps: 'Enter',
+  functional: true,
 },
 {
   name: 'ShiftLeft',
@@ -298,6 +340,7 @@ const keyBtns = [{
   rus: 'Shift',
   engCaps: 'Shift',
   rusCaps: 'Shift',
+  functional: true,
 },
 {
   name: 'KeyZ',
@@ -305,6 +348,7 @@ const keyBtns = [{
   rus: 'я',
   engCaps: 'Z',
   rusCaps: 'Я',
+  functional: false,
 },
 {
   name: 'KeyX',
@@ -312,6 +356,7 @@ const keyBtns = [{
   rus: 'ч',
   engCaps: 'X',
   rusCaps: 'Ч',
+  functional: false,
 },
 {
   name: 'KeyC',
@@ -319,6 +364,7 @@ const keyBtns = [{
   rus: 'с',
   engCaps: 'C',
   rusCaps: 'С',
+  functional: false,
 },
 {
   name: 'KeyV',
@@ -326,6 +372,7 @@ const keyBtns = [{
   rus: 'м',
   engCaps: 'V',
   rusCaps: 'М',
+  functional: false,
 },
 {
   name: 'KeyB',
@@ -333,6 +380,7 @@ const keyBtns = [{
   rus: 'и',
   engCaps: 'B',
   rusCaps: 'И',
+  functional: false,
 },
 {
   name: 'KeyN',
@@ -340,6 +388,7 @@ const keyBtns = [{
   rus: 'т',
   engCaps: 'N',
   rusCaps: 'Т',
+  functional: false,
 },
 {
   name: 'KeyM',
@@ -347,6 +396,7 @@ const keyBtns = [{
   rus: 'ь',
   engCaps: 'M',
   rusCaps: 'Ь',
+  functional: false,
 },
 {
   name: 'Comma',
@@ -354,6 +404,7 @@ const keyBtns = [{
   rus: 'б',
   engCaps: '<',
   rusCaps: 'Б',
+  functional: false,
 },
 {
   name: 'Period',
@@ -361,6 +412,7 @@ const keyBtns = [{
   rus: 'ю',
   engCaps: '>',
   rusCaps: 'Ю',
+  functional: false,
 },
 {
   name: 'Slash',
@@ -368,6 +420,7 @@ const keyBtns = [{
   rus: '.',
   engCaps: '?',
   rusCaps: ',',
+  functional: false,
 },
 {
   name: 'ArrowUp',
@@ -375,6 +428,7 @@ const keyBtns = [{
   rus: '&#9650;',
   engCaps: '&#9650;',
   rusCaps: '&#9650;',
+  functional: true,
 },
 {
   name: 'ShiftRight',
@@ -382,6 +436,7 @@ const keyBtns = [{
   rus: 'Shift',
   engCaps: 'Shift',
   rusCaps: 'Shift',
+  functional: true,
 },
 {
   name: 'ControlLeft',
@@ -389,6 +444,7 @@ const keyBtns = [{
   rus: 'Ctrl',
   engCaps: 'Ctrl',
   rusCaps: 'Ctrl',
+  functional: true,
 },
 {
   name: 'MetaLeft',
@@ -396,6 +452,7 @@ const keyBtns = [{
   rus: 'Win',
   engCaps: 'Win',
   rusCaps: 'Win',
+  functional: true,
 },
 {
   name: 'AltLeft',
@@ -403,6 +460,7 @@ const keyBtns = [{
   rus: 'Alt',
   engCaps: 'Alt',
   rusCaps: 'Alt',
+  functional: true,
 },
 {
   name: 'Space',
@@ -410,6 +468,7 @@ const keyBtns = [{
   rus: ' ',
   engCaps: ' ',
   rusCaps: ' ',
+  functional: false,
 },
 {
   name: 'AltRight',
@@ -417,6 +476,7 @@ const keyBtns = [{
   rus: 'Alt',
   engCaps: 'Alt',
   rusCaps: 'Alt',
+  functional: true,
 },
 {
   name: 'ArrowLeft',
@@ -424,6 +484,7 @@ const keyBtns = [{
   rus: '&#9668;',
   engCaps: '&#9668;',
   rusCaps: '&#9668;',
+  functional: true,
 },
 {
   name: 'ArrowDown',
@@ -431,6 +492,7 @@ const keyBtns = [{
   rus: '&#9660;',
   engCaps: '&#9660;',
   rusCaps: '&#9660;',
+  functional: true,
 },
 {
   name: 'ArrowRight',
@@ -438,6 +500,7 @@ const keyBtns = [{
   rus: '&#9658;',
   engCaps: '&#9658;',
   rusCaps: '&#9658;',
+  functional: true,
 },
 {
   name: 'ControlRight',
@@ -445,6 +508,7 @@ const keyBtns = [{
   rus: 'Ctrl',
   engCaps: 'Ctrl',
   rusCaps: 'Ctrl',
+  functional: true,
 },
 ];
 
