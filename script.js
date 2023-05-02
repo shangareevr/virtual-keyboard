@@ -1,6 +1,5 @@
 import keyBtns from './btns.js';
 
-let lang = localStorage.getItem('lang');
 let caps = false;
 let shift = false;
 const wrapper = document.createElement('div');
@@ -24,14 +23,16 @@ langInfo.innerHTML = 'Клавиатура выполнена под Windows. <b
 wrapper.append(langInfo);
 
 inputText.focus();
-
+let lang = localStorage.getItem('lang') ?? 'eng';
 function getLocalStorage() {
-  if (localStorage.getItem('lang')) {
+  if (localStorage.getItem('lang') !== null) {
     lang = localStorage.getItem('lang');
   } else {
     lang = 'eng';
   }
+  return lang;
 }
+
 window.addEventListener('load', getLocalStorage);
 
 class GenerateKey {
@@ -81,7 +82,7 @@ function generateKeyboard() {
     const res = new GenerateKey(btn.name, btn.rus, btn.eng, btn.rusCaps, btn.engCaps);
     res.createElement();
   });
-  localStorage.setItem('lang', lang);
+  window.localStorage.setItem('lang', lang);
 }
 generateKeyboard();
 
