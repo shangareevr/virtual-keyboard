@@ -1,4 +1,5 @@
 import keyBtns from './btns.js';
+
 let lang = localStorage.getItem('lang');
 let caps = false;
 let shift = false;
@@ -80,7 +81,7 @@ function generateKeyboard() {
     const res = new GenerateKey(btn.name, btn.rus, btn.eng, btn.rusCaps, btn.engCaps);
     res.createElement();
   });
-      localStorage.setItem('lang', lang);
+  localStorage.setItem('lang', lang);
 }
 generateKeyboard();
 
@@ -131,7 +132,6 @@ function changeInputLang() {
   document.addEventListener('keyup', (e) => {
     keysToLang.delete(e.code);
   });
-
 }
 changeInputLang();
 
