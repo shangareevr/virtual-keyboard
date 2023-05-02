@@ -33,6 +33,7 @@ function getLocalStorage() {
   }
 }
 window.addEventListener('load', getLocalStorage);
+
 class GenerateKey {
   constructor(name, rus, eng, rusCaps, engCaps) {
     this.name = name;
@@ -80,6 +81,7 @@ function generateKeyboard() {
     const res = new GenerateKey(btn.name, btn.rus, btn.eng, btn.rusCaps, btn.engCaps);
     res.createElement();
   });
+  localStorage.setItem('lang', lang);
 }
 generateKeyboard();
 
@@ -114,7 +116,6 @@ function defineLang() {
     keyboard.innerHTML = '';
     generateKeyboard();
   }
-  localStorage.setItem('lang', lang);
 }
 
 function changeInputLang() {
