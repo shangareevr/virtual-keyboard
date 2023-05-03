@@ -183,13 +183,15 @@ function capsKay() {
             caps = true;
             lang = `${lang}Caps`;
           }
-          keys.classList.toggle('active');
         }
       });
+      keyboard.innerHTML = '';
+      generateKeyboard();
       keyboard.childNodes.forEach((keys) => {
-        if (keys.classList.contains('letter')) {
-          keyboard.innerHTML = '';
-          generateKeyboard();
+        if (keys.classList.contains(`${e.code}`)) {
+          if (caps) {
+            keys.classList.add('active');
+          }
         }
       });
     }
@@ -320,16 +322,17 @@ function inputTextArea() {
         inputText.selectionEnd = inputText.selectionStart;
       }
     }
+
     keyBtns.forEach((key) => {
       let inLang = lang.substring(0, 3);
+
       if (e.code === key.name && !key.functional) {
         keyboard.childNodes.forEach((btn) => {
           if (caps && !shift) {
             if (btn.classList.contains('letter') && btn.classList.contains(`${e.code}`)) {
-              inLang += 'Caps';
+              inLang = `${lang.substring(0, 3)}Caps`;
             }
           } else
-
           if (shift) {
             inLang = lang;
           }
@@ -410,8 +413,6 @@ function inputTextAreaVirtual() {
           if (caps && !shift) {
             if (clickBtn.contains('letter') && btn.classList.contains(`${key.name}`)) {
               pressLang = `${lang.substring(0, 3)}Caps`;
-            } else {
-              pressLang = lang.substring(0, 3);
             }
           } else
           if (shift && !caps) {
